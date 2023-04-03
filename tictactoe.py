@@ -37,6 +37,10 @@ def player1():
     if checkForWin("x"):
         print("x is the winner.")
         return True
+    if checkForDraw():
+        print("It is a draw.")
+        quit()
+        
     
 def minmax(board,is_maximizing):
     if checkForWin('o'):
@@ -96,6 +100,9 @@ def player2():
     if checkForWin("o"):
         print("o is the winner.")
         return True
+    if checkForDraw():
+        print("It is a draw.")
+        quit()
     
 def checkForDraw():
     for i in board.keys():
@@ -116,11 +123,3 @@ show_board()
 while True:
     if player1():break
     if player2():break
-        
-   
-    
-
-
-
-   
-
